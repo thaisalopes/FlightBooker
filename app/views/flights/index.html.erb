@@ -1,1 +1,6 @@
-Oi
+<h1>Flight Search</h1>
+
+<p1>Departure Airport: <%= select(:departure_airport, :airport_id, @airport_options) %><br><br><br></p1>
+<p2>Arrival Airport: <%= select(:arrival_airport, :airport_id, @airport_options) %></p2><br><br><br>
+<p3>Number of Passengers: <%= select_tag(:number_of_passengers, options_for_select([1,2,3,4])) %></p3><br><br><br>
+<p4>Departure Date: <%= select(:flight, :flight_id, @flight_options) %></p2><br><br><br>

@@ -1,5 +1,7 @@
 class FlightsController < ApplicationController
   def index
-    @flights = Flight.all
+    @airport_options = Airport.all.map {|airport| [airport.name, airport.id]}
+    @flight_options = Flight.all.map {|flight| [flight.start, flight.id]}
+    @flights = Flight.new
   end
 end
